@@ -19,5 +19,5 @@ return {
   NvimTreeWindowPicker = { fg = colors.red, bg = colors.black2 },
   NvimTreeCursorLine = { bg = colors.one_bg3 },
   NvimTreeGitIgnored = { fg = colors.purple },
-  NvimTreeWinSeparator = { fg = colors.darker_black, bg = colors.darker_black },
+  NvimTreeWinSeparator = { fg = colors.darker_black, bg = colors.black },
 }
