@@ -1,7 +1,15 @@
 local merge_tb = require("base16").merge_tb
 
 local highlights = {}
-local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/start/base16/lua/base16/highlight"
+function _G.get_base16_dir()
+  local nvoid_baee16_dir = os.getenv "NVOID_BASE16_DIR"
+  if not nvoid_baee16_dir then
+    return vim.call("stdpath", "data")
+  end
+  return nvoid_baee16_dir
+end
+local hl_dir = get_base16_dir()
+
 
 -- push hl_dir file names to table
 local hl_files = require("plenary.scandir").scan_dir(hl_dir, {})
