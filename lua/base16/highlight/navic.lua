@@ -28,6 +28,5 @@ return {
   NavicIconsEvent = { fg = colors.yellow, bg = "NONE" },
   NavicIconsOperator = { fg = colors.white, bg = "NONE" },
   NavicIconsTypeParameter = { fg = colors.white, bg = "NONE" },
-  NavicText = { fg = colors.grey, bg = "NONE" },
   NavicSeparator = { fg = colors.grey, bg = "NONE" },
 }
