@@ -1,7 +1,7 @@
 local merge_tb = require("base16").merge_tb
 
 local highlights = {}
-local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/start/base16/lua/base16/highlight"
+local hl_dir = vim.fn.stdpath "data" .. "/site/pack/lazy/opt/base16/lua/base16/highlight"
 
 -- push hl_dir file names to table
 local hl_files = require("plenary.scandir").scan_dir(hl_dir, {})
