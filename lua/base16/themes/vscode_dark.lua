@@ -1,9 +1,12 @@
+-- Thanks to original theme for existing https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_plus.json
+-- this is a modified version of it
+
 local M = {}
 
 M.base_30 = {
   white = "#dee1e6",
   darker_black = "#1a1a1a",
-  black = "#1E1E1E",
+  black = "#1E1E1E", --  nvim bg
   black2 = "#252525",
   one_bg = "#282828",
   one_bg2 = "#313131",
@@ -15,7 +18,7 @@ M.base_30 = {
   red = "#D16969",
   baby_pink = "#ea696f",
   pink = "#bb7cb6",
-  line = "#2e2e2e",
+  line = "#2e2e2e", -- for lines like vertsplit
   green = "#B5CEA8",
   green1 = "#4EC994",
   vibrant_green = "#bfd8b2",
@@ -35,6 +38,7 @@ M.base_30 = {
 }
 
 M.base_16 = {
+  --author of this template Tomas Iser, @tomasiser on github,
   base00 = "#1E1E1E",
   base01 = "#262626",
   base02 = "#303030",
@@ -51,6 +55,15 @@ M.base_16 = {
   base0D = "#DCDCAA",
   base0E = "#C586C0",
   base0F = "#E9E9E9",
+}
+
+M.polish_hl = {
+  ["@parameter"] = { fg = M.base_30.blue },
+  ["@keyword"] = { fg = M.base_30.blue },
+  ["@variable"] = { fg = M.base_30.cyan },
+  ["@field.key"] = { fg = M.base_30.green1 },
+  ["@keyword.return"] = { fg = M.base_16.base0E },
+  ["@keyword.function"] = { fg = M.base_30.teal },
 }
 
 return M

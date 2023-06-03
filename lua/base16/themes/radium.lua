@@ -1,3 +1,6 @@
+-- credits to original radium theme from https://github.com/dharmx
+-- this is a modified version of it
+
 local M = {}
 
 M.base_30 = {
@@ -50,6 +53,11 @@ M.base_16 = {
   base0D = "#5fb0fc",
   base0E = "#c397d8",
   base0F = "#e87979",
+}
+
+M.polish_hl = {
+  ["@punctuation.bracket"] = { fg = M.base_16.base07 },
+  ["@parenthesis"] = { link = "@punctuation.bracket" },
 }
 
 return M

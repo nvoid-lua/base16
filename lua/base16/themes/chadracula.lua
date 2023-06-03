@@ -1,11 +1,14 @@
+-- Credits to original theme https://github.com/dracula/vim
+-- This is a modified version 
+
 local M = {}
 
 M.base_30 = {
   white = "#F8F8F2",
   darker_black = "#222430",
-  black = "#282A36",
+  black = "#282A36", --  nvim bg
   black2 = "#2d303e",
-  one_bg = "#373844",
+  one_bg = "#373844", -- real bg of onedark
   one_bg2 = "#44475a",
   one_bg3 = "#565761",
   grey = "#5e5f69",
@@ -15,7 +18,7 @@ M.base_30 = {
   red = "#ff7070",
   baby_pink = "#ff86d3",
   pink = "#FF79C6",
-  line = "#3c3d49",
+  line = "#3c3d49", -- for lines like vertsplit
   green = "#50fa7b",
   vibrant_green = "#5dff88",
   nord_blue = "#8b9bcd",
@@ -50,6 +53,11 @@ M.base_16 = {
   base0D = "#50fa7b",
   base0E = "#ff86d3",
   base0F = "#F8F8F2",
+}
+
+M.polish_hl = {
+  ["@function.builtin"] = { fg = M.base_30.cyan },
+  ["@number"] = { fg = M.base_30.purple },
 }
 
 return M
