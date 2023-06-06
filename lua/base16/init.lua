@@ -40,11 +40,11 @@ M.load_all_highlights = function()
   clear_hl "TS"
 
   reload "base16.highlight"
-  reload "base16.hl"
+  -- reload "base16.hl"
 
-  local hl_groups = require "base16.hl"
+  -- local hl_groups = require "base16.hl"
 
-  for hl, col in pairs(hl_groups) do
+  for hl, col in pairs(require("base16.hightlights")) do
     vim.api.nvim_set_hl(0, hl, col)
   end
 end
