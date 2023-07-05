@@ -154,7 +154,6 @@ end
 
 M.list_themes = function()
 	local default_themes = vim.fn.readdir(vim.fn.stdpath("data") .. "/site/pack/lazy/opt/base16/lua/base16/themes")
-	-- local default_themes = "base16.themes." .. g.theme
 
 	local custom_themes = vim.loop.fs_stat(fn.stdpath("config") .. "/lua/custom/themes")
 
