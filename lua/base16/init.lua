@@ -173,12 +173,12 @@ M.list_themes = function()
 end
 
 M.replace_word = function(old, new)
-	local chadrc = vim.fn.stdpath("config") .. "/config.lua"
-	local file = io.open(chadrc, "r")
+	local config_file = vim.fn.stdpath("config") .. "/config.lua"
+	local file = io.open(config_file, "r")
 	local added_pattern = string.gsub(old, "-", "%%-") -- add % before - if exists
 	local new_content = file:read("*all"):gsub(added_pattern, new)
 
-	file = io.open(chadrc, "w")
+	file = io.open(config_file, "w")
 	file:write(new_content)
 	file:close()
 end
