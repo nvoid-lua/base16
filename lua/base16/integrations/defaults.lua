@@ -175,47 +175,18 @@ local defaults = {
 	},
 
 	-- spell
-	SpellBad = {
-		undercurl = true,
-		sp = theme.base08,
-	},
+	SpellBad = { undercurl = true, sp = theme.base08 },
+	SpellLocal = { undercurl = true, sp = theme.base0C },
+	SpellCap = { undercurl = true, sp = theme.base0D },
+	SpellRare = { undercurl = true, sp = theme.base0E },
 
-	SpellLocal = {
-		undercurl = true,
-		sp = theme.base0C,
-	},
-
-	SpellCap = {
-		undercurl = true,
-		sp = theme.base0D,
-	},
-
-	SpellRare = {
-		undercurl = true,
-		sp = theme.base0E,
-	},
-
-	healthSuccess = {
-		bg = colors.green,
-		fg = colors.black,
-	},
+	-- Health
+	healthSuccess = { bg = colors.green, fg = colors.black },
 
 	-- lazy.nvim
-	LazyH1 = {
-		bg = colors.green,
-		fg = colors.black,
-	},
-
-	LazyButton = {
-		bg = colors.one_bg,
-	},
-
-	LazyH2 = {
-		fg = colors.red,
-		bold = true,
-		underline = true,
-	},
-
+	LazyH1 = { bg = colors.green, fg = colors.black },
+	LazyButton = { bg = colors.one_bg },
+	LazyH2 = { fg = colors.red, bold = true, underline = true },
 	LazyReasonPlugin = { fg = colors.red },
 	LazyValue = { fg = colors.teal },
 	LazyDir = { fg = theme.base05 },
