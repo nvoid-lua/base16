@@ -182,8 +182,4 @@ M.replace_word = function(old, new)
 	file:close()
 end
 
-function M.setup()
-	M.load_all_highlights()
-end
-
 return M
