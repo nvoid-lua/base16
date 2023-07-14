@@ -28,4 +28,11 @@ return {
 	CmpItemKindStruct = { fg = theme.base0E },
 	CmpItemKindOperator = { fg = theme.base05 },
 	CmpItemKindTypeParameter = { fg = theme.base08 },
+	CmpItemKindEnum = { fg = "blue" },
+	CmpItemKindClass = { fg = "teal" },
+	CmpItemKindInterface = { fg = "green" },
+	CmpItemKindEnumMember = { fg = "purple" },
+	CmpItemKindCopilot = { fg = "green" },
+	CmpItemKindValue = { fg = "cyan" },
+	CmpItemKindEvent = { fg = "yellow" },
 }
