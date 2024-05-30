@@ -1,4 +1,5 @@
 local theme = require("base16").get_theme_tb("base_16")
+local colors = require("base16").get_theme_tb("base_30")
 
 return {
 	["@annotation"] = { fg = theme.base0F },
@@ -53,4 +54,41 @@ return {
 	["@property"] = { fg = theme.base08 },
 	["@include"] = { link = "Include" },
 	["@conditional"] = { link = "Conditional" },
+
+	["@variable.parameter"] = { fg = theme.base08 },
+	["@variable.member"] = { fg = theme.base08 },
+	["@variable.member.key"] = { fg = theme.base08 },
+
+	["@module"] = { fg = theme.base08 },
+	["@number"] = { fg = theme.base09 },
+	["@number.float"] = { fg = theme.base09 },
+	["@keyword.exception"] = { fg = theme.base08 },
+	["@keyword.import"] = { link = "Include" },
+	["@keyword.conditional"] = { fg = theme.base0E },
+	["@keyword.conditional.ternary"] = { fg = theme.base0E },
+	["@keyword.repeat"] = { fg = theme.base0A },
+	["@keyword.storage"] = { fg = theme.base0A },
+	["@keyword.directive.define"] = { fg = theme.base0E },
+	["@keyword.directive"] = { fg = theme.base0A },
+	["@function.method"] = { fg = theme.base0D },
+	["@function.method.call"] = { fg = theme.base0D },
+	["@markup.heading"] = { fg = theme.base0D },
+	["@markup.raw"] = { fg = theme.base09 },
+	["@markup.link"] = { fg = theme.base08 },
+	["@markup.link.url"] = { fg = theme.base09, underline = true },
+	["@markup.link.label"] = { fg = theme.base0C },
+	["@markup.list"] = { fg = theme.base08 },
+	["@markup.strong"] = { bold = true },
+	["@markup.underline"] = { underline = true },
+	["@markup.italic"] = { italic = true },
+	["@markup.strikethrough"] = { strikethrough = true },
+	["@markup.quote"] = { bg = colors.black2 },
+	["@comment"] = { fg = colors.grey_fg },
+	["@comment.todo"] = { fg = colors.grey, bg = colors.white },
+	["@comment.warning"] = { fg = colors.black2, bg = theme.base09 },
+	["@comment.note"] = { fg = colors.black2, bg = colors.white },
+	["@comment.danger"] = { fg = colors.black2, bg = colors.red },
+	["@diff.plus"] = { fg = colors.green },
+	["@diff.minus"] = { fg = colors.red },
+	["@diff.delta"] = { fg = colors.light_grey },
 }

@@ -2,6 +2,11 @@ local colors = require("base16").get_theme_tb("base_30")
 local theme = require("base16").get_theme_tb("base_16")
 
 local defaults = {
+	Added = { fg = colors.green },
+	Removed = { fg = colors.red },
+	Changed = { fg = colors.yellow },
+	DevIconDefault = { fg = colors.red },
+
 	MatchWord = {
 		bg = colors.grey,
 		fg = colors.white,
