@@ -2,6 +2,16 @@ local colors = require("base16").get_theme_tb("base_30")
 local theme = require("base16").get_theme_tb("base_16")
 
 return {
+	NavicIconsIdentifier = { fg = theme.base08 },
+	NavicIconsSnippet = { fg = colors.red },
+	NavicIconsText = { fg = theme.base0B },
+	NavicIconsStructure = { fg = theme.base0E },
+	NavicIconsType = { fg = theme.base0A },
+	NavicIconsFolder = { fg = theme.base07 },
+	NavicIconsUnit = { fg = theme.base0E },
+	NavicIconsColor = { fg = colors.white },
+	NavicIconsReference = { fg = theme.base05 },
+	NavicIconsValue = { fg = colors.cyan },
 	NavicIconsFile = { fg = theme.base07 },
 	NavicIconsModule = { fg = theme.base0A },
 	NavicIconsNamespace = { fg = theme.base0A },
