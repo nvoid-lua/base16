@@ -5,7 +5,7 @@ local base16_path = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:
 
 M.get_theme_tb = function(type)
 	local default_path = "base16.themes." .. g.theme
-	local user_path = "custom.themes." .. g.theme
+	local user_path = "themes." .. g.theme
 
 	local present1, default_theme = pcall(require, default_path)
 	local present2, user_theme = pcall(require, user_path)
