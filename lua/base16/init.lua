@@ -155,10 +155,10 @@ end
 M.list_themes = function()
 	local default_themes = vim.fn.readdir(vim.fn.stdpath("data") .. "/site/pack/lazy/opt/base16/lua/base16/themes")
 
-	local custom_themes = vim.loop.fs_stat(fn.stdpath("config") .. "/lua/custom/themes")
+	local custom_themes = vim.loop.fs_stat(fn.stdpath("config") .. "/lua/themes")
 
 	if custom_themes and custom_themes.type == "directory" then
-		local themes_tb = fn.readdir(fn.stdpath("config") .. "/lua/custom/themes")
+		local themes_tb = fn.readdir(fn.stdpath("config") .. "/lua/themes")
 		for _, value in ipairs(themes_tb) do
 			default_themes[#default_themes + 1] = value
 		end
