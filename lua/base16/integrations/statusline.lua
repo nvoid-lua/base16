@@ -44,4 +44,11 @@ return {
 	NVInfoIdentifier = { fg = colors.yellow, bold = true },
 	NVInfoHeader = { fg = colors.yellow },
 	NVInfoStar = { fg = colors.red },
+	NvoidInfoHeader = { bg = "blue", fg = "black" },
+	NvoidInfoBullet = { fg = "blue" },
+	NvoidInfoHeaderBuffer = { bg = "blue", fg = "black" },
+	NvoidInfoHeaderLsp = { bg = "green", fg = "black" },
+	NvoidInfoHeaderLint = { bg = "yellow", fg = "black" },
+	NvoidInfoHeaderFormat = { bg = "purple", fg = "black" },
+	NvoidInfoIdentifier = { fg = "white" },
 }
