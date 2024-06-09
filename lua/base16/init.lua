@@ -41,20 +41,16 @@ M.turn_str_to_color = function(tb)
 	return copy
 end
 
-M.extend_default_hl = function(highlights)
+M.extend_default_hl = function(highlights, integration_name)
 	local polish_hl = M.get_theme_tb("polish_hl")
 
 	-- polish themes
-	if polish_hl then
-		for key, value in pairs(polish_hl) do
-			if highlights[key] then
-				highlights[key] = M.merge_tb(highlights[key], value)
-			end
-		end
+	if polish_hl and polish_hl[integration_name] then
+		highlights = M.merge_tb(highlights, polish_hl[integration_name])
 	end
 
 	-- transparency
-	if vim.g.transparency then
+	if nvoid.ui.transparency then
 		local glassy = require("base16.glassy")
 
 		for key, value in pairs(glassy) do
@@ -73,12 +69,13 @@ M.extend_default_hl = function(highlights)
 			end
 		end
 	end
+
+	return highlights
 end
 
 M.load_highlight = function(group)
-	group = require("base16.integrations." .. group)
-	M.extend_default_hl(group)
-	return group
+	local highlights = require("base16.integrations." .. group)
+	return M.extend_default_hl(highlights, group)
 end
 
 -- convert table into string
@@ -130,15 +127,6 @@ M.compile = function()
 		if file ~= "statusline" or file ~= "treesitter" then
 			local filename = vim.fn.fnamemodify(file, ":r")
 			M.saveStr_to_cache(filename, M.load_highlight(filename))
-		end
-	end
-
-	-- look for custom cached highlight files
-	local extended_integrations = nvoid.ui.extended_integrations
-
-	if extended_integrations then
-		for _, integration in ipairs(extended_integrations) do
-			M.saveStr_to_cache(integration, require("base16.extended_integrations." .. integration))
 		end
 	end
 end
